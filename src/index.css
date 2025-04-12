@@ -1,0 +1,130 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 44% 96%;
+    --foreground: 260 10% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 260 10% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 260 10% 20%;
+
+    --primary: 258 81% 75%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 199 75% 49%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 330 100% 71%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 258 81% 75%;
+
+    --radius: 0.25rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 229 18% 14%;
+    --foreground: 120 100% 69%;
+
+    --card: 229 18% 14%;
+    --card-foreground: 120 100% 69%;
+
+    --popover: 229 18% 14%;
+    --popover-foreground: 120 100% 69%;
+
+    --primary: 258 81% 75%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 199 75% 49%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 330 100% 71%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 258 81% 75%;
+
+    --sidebar-background: 229 18% 10%;
+    --sidebar-foreground: 120 100% 69%;
+    --sidebar-primary: 258 81% 75%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 229 18% 20%;
+    --sidebar-accent-foreground: 120 100% 69%;
+    --sidebar-border: 229 18% 20%;
+    --sidebar-ring: 258 81% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .retro-border {
+    @apply border-2 border-black dark:border-retro-green shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(95,255,95,0.5)];
+  }
+  
+  .retro-btn {
+    @apply px-4 py-2 font-pixel text-xs bg-retro-purple text-white retro-border hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] dark:hover:shadow-[2px_2px_0px_0px_rgba(95,255,95,0.5)] transition-all active:translate-x-[4px] active:translate-y-[4px] active:shadow-none;
+  }
+  
+  .retro-input {
+    @apply px-3 py-2 font-mono text-base bg-white dark:bg-retro-navy retro-border focus:outline-none focus:ring-2 focus:ring-retro-purple dark:focus:ring-retro-green;
+  }
+  
+  .retro-card {
+    @apply bg-white dark:bg-retro-navy retro-border p-4;
+  }
+  
+  .crt-overlay::before {
+    content: "";
+    @apply absolute top-0 left-0 right-0 bottom-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] z-50 pointer-events-none bg-[size:100%_2px,3px_100%];
+  }
+  
+  .crt-screen {
+    @apply relative overflow-hidden rounded-md;
+  }
+  
+  .crt-screen::after {
+    content: "";
+    @apply absolute top-0 left-0 right-0 bottom-0 bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0)_0%,rgba(95,255,95,0.15)_90%)] pointer-events-none animate-crt-flicker;
+  }
+}
