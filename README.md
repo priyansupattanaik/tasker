@@ -1,73 +1,41 @@
-# Welcome to your Lovable project
+# 🎮 RetroTasker — A Retro-Themed To-Do App
 
-## Project info
+Welcome to **RetroTasker**, a stylish and functional to-do list app . Inspired by the aesthetics of 1980s personal computing, this app blends nostalgic design with modern features like category grouping and drag-to-reorder tasks.
 
-**URL**: https://lovable.dev/projects/727600cd-2463-4bf9-87ad-78d73d61fd6b
+Live Project ➡️ [View on Vercel](https://tasker-seven-jade.vercel.app/)
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🧠 Features
 
-**Use Lovable**
+- 🗂️ **Categorized Tasks**: Organize your todos into custom folders
+- ✏️ **Add/Edit/Delete Tasks**: With priority levels and optional notes
+- 🔃 **Drag-to-Reorder**: Smooth drag-and-drop interactions for sorting tasks
+- 🌈 **Retro Themes**: Switch between Light Retro and Dark CRT modes
+- 🔍 **Search & Filters**: Quickly find tasks by keyword or priority
+- 📅 **Due Dates**: Optional calendar picker for deadlines
+- ✅ **Task Completion**: Satisfying toggle with pixel-style animations
+- 🔒 **Local Storage**: Tasks persist across sessions
+- 🔄 **Undo/Redo**: Quickly correct accidental changes
+- 🎵 **Retro Sounds**: Optional clicky SFX for added nostalgia
+- 📊 **Stats (Bonus)**: Weekly progress tracking (optional)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/727600cd-2463-4bf9-87ad-78d73d61fd6b) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 How to Run Locally
 
-**Use your preferred IDE**
+Make sure you have Node.js and npm installed. Then:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+```bash
+# Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to the project
+cd retro-tasker
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Run the development server
 npm run dev
 ```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/727600cd-2463-4bf9-87ad-78d73d61fd6b) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes it is!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
